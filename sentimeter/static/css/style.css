@@ -1,0 +1,26 @@
+/*
+	Creator : Kapish Prasad Singh;
+	Url : www.facebook.com/coolkps;
+	email : coolkps@gmail.com;
+	description :Contains all the styles for index.html;
+*/
+
+.show {
+    opacity :1;
+    display: block;
+}
+
+.hide{
+    opacity: 0;
+    display: none;
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href={% static 'css/materialize.min.css' %} media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href={% static 'css/style.css' %} />
+    <script type="text/javascript" src={% static 'js/jquery-1.10.2.min.js' %}></script>
+    <script type="text/javascript" src={% static 'js/materialize.min.js' %}></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $('select').material_select();
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <title>SentiMeter</title>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="nav-wrapper teal lighten-2">
+            <a href="/" class="brand-logo center">Senti-Meter</a>
+        </div>
+    </nav>
+</header>
+<main>
+    <br>
+    {% block body %}
+    {% endblock %}
+</main>
+<footer class="page-footer teal lighten-2" style="!important;padding-top: 0">
+    <div class="footer-copyright">
+        <div class="container">© 2016 Copyright
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
