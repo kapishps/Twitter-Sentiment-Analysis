@@ -2,11 +2,31 @@
 <html lang="en">
 {% load staticfiles %}
 <head>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href={% static 'css/materialize.min.css' %} media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href={% static 'css/style.css' %} />
-    <script type="text/javascript" src={% static 'js/jquery-1.10.2.min.js' %}></script>
-    <script type="text/javascript" src={% static 'js/materialize.min.js' %}></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+    <style media="screen" type="text/css">
+        .show {
+            opacity :1;
+            display: block;
+        }
+
+        .hide{
+            opacity: 0;
+            display: none;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
             $('select').material_select();
