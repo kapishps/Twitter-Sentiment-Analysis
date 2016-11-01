@@ -32,4 +32,5 @@ def primary(input_hashtag):
     # print "Positive ",float(pos_count/N)*100,"%"
     # print "Negative ",float(neg_count/N)*100,"%"
     # print "Neutral ",float(neutral_count/N)*100,"%"
-    return [['Sentiment', '% of tweets'],['Neutral',neutral_count],['Positive',pos_count],['Negative',neg_count]]
+    return [['Sentiment', 'no. of tweets'],['Positive',pos_count]
+            ,['Neutral',neutral_count],['Negative',neg_count]]

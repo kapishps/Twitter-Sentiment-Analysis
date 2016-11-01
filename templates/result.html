@@ -7,15 +7,26 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable({{ data|safe }} );
             var options = {
-                title: 'Sentiment Pie Chart'
-{#                slices: {0: {color: 'blue'}, 1:{color: 'green'}, 2:{color: 'red'}}#}
+                legend: {position: 'bottom', alignment: 'center', maxLines: 3},
+                slices: {
+                    0: { color: '#4CAF50' },
+                    1: { color: '#2196F3' },
+                    2: { color: '#F44336' }
+                }
             };
             var chart = new google.visualization.PieChart(document.getElementById('piechart'));
             chart.draw(data, options);
         }
+        $(window).resize(function(){        //to make chart Responsive
+            drawChart();
+        });
     </script>
 {% endblock %}
 
 {% block body %}
-    <div id="piechart" style="width: 900px; height: 500px;"></div>
+    <div class="row">
+        <div class="col s12 m12 l12" >
+            <div id="piechart" style="width: 100%; min-height: 450px;"></div>
+        </div>
+    </div>
 {% endblock %}

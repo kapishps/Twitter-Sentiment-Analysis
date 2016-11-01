@@ -4,5 +4,5 @@ from .views import userinput
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^input/$', views.analyse, name='input'),
+    url(r'^analyse/$', views.analyse, name='analyse'),
 ]
