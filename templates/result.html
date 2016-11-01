@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block header %}
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable({{ data|safe }} );
+            var options = {
+                title: 'Sentiment Pie Chart'
+{#                slices: {0: {color: 'blue'}, 1:{color: 'green'}, 2:{color: 'red'}}#}
+            };
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+{% endblock %}

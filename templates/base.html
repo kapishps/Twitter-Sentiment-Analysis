@@ -5,22 +5,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
     <style media="screen" type="text/css">
-        .show {
-            opacity :1;
-            display: block;
-        }
-
-        .hide{
-            opacity: 0;
-            display: none;
-        }
-
         body {
             display: flex;
             min-height: 100vh;
             flex-direction: column;
         }
-
         main {
             flex: 1 0 auto;
         }
@@ -31,7 +20,7 @@
         jQuery(document).ready(function ($) {
             $('select').material_select();
         });
-    </script>
+    </script>{% block header %}{% endblock %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta charset="UTF-8">
     <title>SentiMeter</title>
@@ -40,20 +29,16 @@
 <header>
     <nav>
         <div class="nav-wrapper teal lighten-2">
-            <a href="/" class="brand-logo center">Senti-Meter</a>
-        </div>
-    </nav>
+            <a href="/" class="brand-logo center">Senti-Meter</a></div></nav>
 </header>
 <main>
     <br>
-    {% block body %}
-    {% endblock %}
+    {% block body %}{% endblock %}
 </main>
 <footer class="page-footer teal lighten-2" style="!important;padding-top: 0">
     <div class="footer-copyright">
-        <div class="container">© 2016 Copyright
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-        </div>
+        <div class="container">© 2016 Copyright Kapish
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a></div>
     </div>
 </footer>
 </body>

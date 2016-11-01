@@ -14,7 +14,6 @@ def analyse(request):
     if request.GET and user_input.is_valid():
         input_hastag = user_input.cleaned_data['q']
         print input_hastag
-        sentimeter.primary(input_hastag)
-        context={}
-        return render(request, "index.html", {'input_hastag': user_input})
+        data = sentimeter.primary(input_hastag)
+        return render(request, "result.html", {'data': data})
     return render(request, "index.html", {'input_hastag': user_input})
