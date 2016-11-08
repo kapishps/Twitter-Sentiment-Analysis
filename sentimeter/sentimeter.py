@@ -10,7 +10,7 @@ def primary(input_hashtag):
 
     api = tweepy.API(auth)
 
-    N = 100                          #Number of Tweets
+    N = 1000                          #Number of Tweets
     Tweets = tweepy.Cursor(api.search, q=input_hashtag).items(N)
     neg = 0.0
     pos = 0.0
